@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apple-inspired custom properties */
+:root {
+  --apple-blue: #007AFF;
+  --apple-blue-dark: #0051D5;
+  --apple-gray-50: #F2F2F7;
+  --apple-gray-100: #E5E5EA;
+  --apple-gray-200: #D1D1D6;
+  --apple-gray-300: #C7C7CC;
+  --apple-gray-400: #AEAEB2;
+  --apple-gray-500: #8E8E93;
+  --apple-gray-600: #636366;
+  --apple-gray-700: #48484A;
+  --apple-gray-800: #3A3A3C;
+  --apple-gray-900: #1C1C1E;
+  --apple-red: #FF3B30;
+  --apple-orange: #FF9500;
+  --apple-green: #34C759;
+  --apple-purple: #AF52DE;
+  --apple-pink: #FF2D92;
+  --apple-teal: #5AC8FA;
+  --apple-indigo: #5856D6;
+  --apple-yellow: #FFCC00;
+  --apple-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  --apple-shadow-large: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--apple-gray-50);
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Apple-inspired utility classes */
+.apple-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--apple-shadow);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.apple-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--apple-shadow-large);
+}
+
+.apple-button-primary {
+  background: var(--apple-blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.apple-button-primary:hover {
+  background: var(--apple-blue-dark);
+  transform: translateY(-1px);
+}
+
+.apple-button-secondary {
+  background: var(--apple-gray-100);
+  color: var(--apple-gray-700);
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.apple-button-secondary:hover {
+  background: var(--apple-gray-200);
+}
+
+.apple-plus-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--apple-blue);
+  border: none;
+  box-shadow: var(--apple-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.apple-plus-button:hover {
+  background: var(--apple-blue-dark);
+  transform: scale(1.05);
+  box-shadow: var(--apple-shadow-large);
+}
+
+.apple-plus-button:active {
+  transform: scale(0.95);
+}
+
+.apple-plus-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.book-cover {
+  width: 60px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--apple-gray-200) 0%, var(--apple-gray-300) 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover-placeholder {
+  width: 60px;
+  height: 90px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-purple) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-menu {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: var(--apple-shadow-large);
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.admin-menu-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background: var(--apple-gray-100);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-menu-toggle:hover {
+  background: var(--apple-gray-200);
+}
+
+.admin-menu-button {
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.admin-menu-button.danger {
+  background: var(--apple-red);
+  color: white;
+}
+
+.admin-menu-button.danger:hover {
+  background: #D70015;
+}
+
+.admin-menu-button.warning {
+  background: var(--apple-orange);
+  color: white;
+}
+
+.admin-menu-button.warning:hover {
+  background: #E6820B;
+}
+
+/* Character map styles */
+.character-node {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.character-node:hover {
+  filter: brightness(1.1);
+}
+
+.character-node.dead {
+  opacity: 0.6;
+  filter: grayscale(50%);
+}
+
+.character-node.new-in-chapter {
+  stroke: #F59E0B;
+  stroke-width: 3px;
+}
+
+.character-link {
+  fill: none;
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+.character-link:hover {
+  opacity: 1;
+}
